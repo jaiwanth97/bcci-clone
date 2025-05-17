@@ -1,0 +1,363 @@
+/* Light Theme - Elegant Colors */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #F4F6F9;
+    color: #333;
+    font-family: "Gill Sans", "Lato", Arial, sans-serif;
+    padding-top: 75px;
+    overflow-x: hidden;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #00416A; /* BCCI Blue */
+    padding: 10px 50px;
+    height: 65px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-bottom: 4px solid #FF6F00;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: calc(100% - 100px);
+    z-index: 1000;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Logo Styling */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FF6F00;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    transition: text-shadow 0.4s ease-in-out;
+}
+
+.logo:hover {
+    text-shadow: 0px 0px 15px rgba(255, 111, 0, 0.8);
+}
+
+.logo img {
+    width: 60px;
+    height: 60px;
+    animation: slowRotate 15s linear infinite;
+}
+
+@keyframes slowRotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Slider Part */
+.Slider-part {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    font-family: "Gill Sans", "Lato", Arial, sans-serif;
+}
+
+/* Orange-Themed Slider */
+.main-slider {
+    position: relative;
+    width: 60px;
+    height: 30px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 3px;
+    overflow: hidden;
+    background: linear-gradient(90deg, #FF6F00, #FF8F00); /* Orange Gradient */
+    background-size: 200% 100%;
+    background-position: left;
+    transition: background-position 0.4s ease-in-out;
+}
+
+/* Active Slider */
+.main-slider.active {
+    background-position: right;
+}
+
+/* Slider Circle */
+.slider-circle {
+    width: 24px;
+    height: 24px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s ease-in-out;
+    transform: translateX(3px);
+}
+
+/* Move Slider Circle */
+.main-slider.active .slider-circle {
+    transform: translateX(30px);
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.nav-links p {
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    padding: 8px 10px;
+    position: relative;
+    font-family: "Gill Sans", "Lato", Arial, sans-serif;
+    transition: color 0.3s ease-in-out;
+    white-space: nowrap;
+    margin: 0;
+}
+
+/* Hover Effect - Orange Underline */
+.nav-links p::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0%;
+    height: 3px;
+    background-color: #FF6F00;
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-links p:hover::after {
+    width: 100%;
+}
+
+/* Active Link Styling */
+.nav-links p.active {
+    color: #FF6F00;
+    font-weight: bold;
+}
+
+.nav-links p.active::after {
+    width: 100%;
+}
+
+/* Styles for React Router Link components */
+.nav-links a {
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    padding: 8px 10px;
+    position: relative;
+    font-family: "Gill Sans", "Lato", Arial, sans-serif;
+    transition: color 0.3s ease-in-out;
+    white-space: nowrap;
+    margin: 0;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* Hover Effect - Orange Underline for Links */
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0%;
+    height: 3px;
+    background-color: #FF6F00;
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Active Link Styling for Links */
+.nav-links a.active {
+    color: #FF6F00;
+    font-weight: bold;
+}
+
+.nav-links a.active::after {
+    width: 100%;
+}
+
+/* Login Button Styling */
+.login-button {
+    padding: 8px 16px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    border-radius: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    background: linear-gradient(90deg, #FF6F00, #FF8F00);
+    transition: all 0.3s ease-in-out;
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 16px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.login-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.login-button::after {
+    display: none; /* Remove underline effect for login button */
+}
+
+.login-button.active {
+    background: linear-gradient(90deg, #FF8F00, #FFA726);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* See All Button (reused for login page) */
+.see-all-button {
+    top: 1rem; 
+    margin-left: 82%;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    border-radius: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    background: linear-gradient(90deg, #FF6F00, #FF8F00);
+    z-index: 1000; 
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    border: none;
+    outline: none;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.see-all-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Section IDs (for scrolling) */
+#matches, #news, #honours {
+    scroll-margin-top: 85px; /* Accounts for fixed navbar height + some padding */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 10px 30px;
+        width: calc(100% - 60px);
+    }
+    
+    .nav-links {
+        gap: 12px;
+    }
+    
+    .nav-links p, .nav-links a {
+        font-size: 15px;
+        padding: 6px 8px;
+    }
+    
+    .Slider-part {
+        font-size: 18px;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 20px;
+        width: calc(100% - 40px);
+        flex-wrap: wrap;
+        height: auto;
+    }
+    
+    .Slider-part {
+        order: 2;
+        margin: 10px 0;
+        font-size: 16px;
+    }
+    
+    .nav-links {
+        gap: 8px;
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+    }
+    
+    .nav-links p, .nav-links a {
+        font-size: 14px;
+        padding: 5px 6px;
+    }
+    
+    body {
+        padding-top: 120px; /* Adjust for taller navbar */
+    }
+    
+    #matches, #news, #honours {
+        scroll-margin-top: 130px;
+    }
+    
+    .see-all-button {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        width: 80%;
+        max-width: 200px;
+    }
+}
+
+/* Mobile Menu for very small screens */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        width: calc(100% - 20px);
+    }
+    
+    .logo {
+        margin-bottom: 10px;
+    }
+    
+    .Slider-part {
+        margin: 5px 0;
+    }
+    
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    body {
+        padding-top: 160px;
+    }
+    
+    #matches, #news, #honours {
+        scroll-margin-top: 170px;
+    }
+}

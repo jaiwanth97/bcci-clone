@@ -1,0 +1,211 @@
+/* Honours Section */
+.honours {
+  padding: 60px 0;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 100%;
+}
+
+.honours__title {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 40px;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 700;
+  position: relative;
+}
+
+.honours__title::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: #0055b8;
+}
+
+/* Slider Container */
+.trophy-slider {
+  position: relative;
+  padding: 40px 20px 60px;
+  overflow: hidden;
+  margin: 0 auto;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.trophy-slider::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('./Cups/download1.jpeg') no-repeat center center;
+  background-size: cover;
+  filter: blur(8px) brightness(0.4);
+  opacity: 1;
+  z-index: -1;
+}
+
+/* Image Slider */
+.trophy-slider__track {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  white-space: nowrap;
+  cursor: grab;
+  gap: 30px;
+  padding: 20px 40px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.trophy-slider__track::-webkit-scrollbar {
+  display: none;
+}
+
+/* Slide Items */
+.trophy-card {
+  flex: 0 0 auto;
+  width: 300px;
+  max-width: 80%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
+  padding: 15px 15px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.trophy-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+.trophy-card__image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  transition: opacity 0.3s ease;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.trophy-card__year {
+  text-align: center;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 15px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+/* Slider Instructions */
+.trophy-slider__instructions {
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  margin-top: 30px;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  position: relative;
+  padding: 10px 0;
+}
+
+.trophy-slider__instructions::before,
+.trophy-slider__instructions::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 50px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.trophy-slider__instructions::before {
+  left: 25%;
+}
+
+.trophy-slider__instructions::after {
+  right: 25%;
+}
+
+/* Grabbing State */
+.trophy-slider__track:active {
+  cursor: grabbing;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+  .trophy-card {
+    width: 280px;
+  }
+  
+  .trophy-slider {
+    padding: 50px 30px 70px;
+  }
+  
+  .trophy-slider__track {
+    padding: 30px 60px;
+    gap: 40px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .honours {
+    padding: 80px 0;
+  }
+
+  .trophy-card {
+    width: 320px;
+  }
+  
+  .trophy-slider {
+    padding: 60px 40px 80px;
+    max-width: 90%;
+  }
+  
+  .trophy-slider__track {
+    padding: 40px 80px;
+    gap: 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  .honours__title {
+    font-size: 2.4rem;
+  }
+  
+  .trophy-card {
+    width: 240px;
+  }
+  
+  .trophy-slider__track {
+    padding: 20px 30px;
+    gap: 25px;
+  }
+  
+  .trophy-card__year {
+    font-size: 1.3rem;
+  }
+  
+  .trophy-slider__instructions::before {
+    left: 15%;
+  }
+
+  .trophy-slider__instructions::after {
+    right: 15%;
+  }
+}

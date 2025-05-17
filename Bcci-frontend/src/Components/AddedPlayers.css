@@ -1,0 +1,347 @@
+/* AddedPlayers.css - Modern and Clean Design with Unique ClassNames */
+
+/* Container and Base Styles */
+.cricket-players-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  color: #333;
+}
+
+/* Header Styles */
+.cricket-players-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e1e4e8;
+}
+
+.cricket-players-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e40af;
+  margin: 0;
+}
+
+.cricket-players-add-button {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(37, 99, 235, 0.3);
+}
+
+.cricket-players-add-button:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(37, 99, 235, 0.4);
+}
+
+/* Search and Filter Styles */
+.cricket-players-search-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.cricket-players-search-box {
+  flex: 1;
+  min-width: 250px;
+  position: relative;
+}
+
+.cricket-players-search-box input {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 2.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.cricket-players-search-box input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.cricket-players-search-icon {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+}
+
+.cricket-players-filters {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.cricket-players-filters select {
+  padding: 0.75rem 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  background-color: white;
+  min-width: 150px;
+  font-size: 1rem;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1rem;
+  padding-right: 2.5rem;
+}
+
+.cricket-players-filters select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* No Results Styles */
+.cricket-players-no-results {
+  text-align: center;
+  padding: 3rem;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.cricket-players-no-results-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  opacity: 0.7;
+}
+
+.cricket-players-no-results p {
+  color: #6b7280;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* Player Grid Styles */
+.cricket-players-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.cricket-player-card {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cricket-player-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cricket-player-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.cricket-player-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.cricket-player-card:hover .cricket-player-image img {
+  transform: scale(1.05);
+}
+
+.cricket-player-content {
+  padding: 1.25rem;
+}
+
+.cricket-player-content h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1e40af;
+  margin: 0 0 1rem 0;
+}
+
+.cricket-player-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.cricket-player-stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.cricket-player-stat-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #6b7280;
+  margin-bottom: 0.25rem;
+}
+
+.cricket-player-stat-value {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #111827;
+}
+
+.cricket-player-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.cricket-player-edit-button, .cricket-player-delete-button {
+  padding: 0.6rem 0;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cricket-player-edit-button {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.cricket-player-edit-button:hover {
+  background-color: #2563eb;
+}
+
+.cricket-player-delete-button {
+  background-color: #ef4444;
+  color: white;
+}
+
+.cricket-player-delete-button:hover {
+  background-color: #dc2626;
+}
+
+/* Footer Styles */
+.cricket-players-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e1e4e8;
+}
+
+.cricket-players-footer p {
+  color: #6b7280;
+  font-weight: 500;
+  margin: 0;
+}
+
+.cricket-players-home-link {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.2s ease;
+}
+
+.cricket-players-home-link:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
+}
+
+/* Loading and Error States */
+.cricket-players-loading, .cricket-players-error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  font-size: 1.1rem;
+}
+
+.cricket-players-loading {
+  color: #6b7280;
+}
+
+.cricket-players-error {
+  color: #dc2626;
+  background-color: #fee2e2;
+  padding: 1rem 2rem;
+  border-radius: 6px;
+  border-left: 4px solid #dc2626;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .cricket-players-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .cricket-players-add-button {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .cricket-players-search-filter {
+    flex-direction: column;
+  }
+  
+  .cricket-players-filters {
+    width: 100%;
+  }
+  
+  .cricket-players-filters select {
+    flex: 1;
+  }
+  
+  .cricket-players-footer {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  .cricket-players-home-link {
+    width: 100%;
+    justify-content: center;
+    padding: 0.5rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .cricket-players-container {
+    padding: 1rem;
+  }
+  
+  .cricket-players-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .cricket-players-filters {
+    flex-direction: column;
+  }
+}

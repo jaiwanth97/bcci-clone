@@ -1,0 +1,240 @@
+/* All Matches Page */
+.all-matches-page {
+    width: 100%;
+    max-width: 1400px;
+    margin: 30px auto;
+    padding: 0 20px;
+  }
+  
+  /* Page Header */
+  .page-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid  #FF6F00;
+  }
+  
+  .page-header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #004AAD;
+    margin: 0;
+    flex-grow: 1;
+    text-align: center;
+  }
+  
+  .back-link {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 10px 15px;
+    background: linear-gradient(90deg, #FF6F00, #FF8F00);
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  
+  .back-link:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Filters Section */
+  .filters-section {
+    background: linear-gradient(90deg, #fefefe, #eaf0ff);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .filter-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .filter-group:last-child {
+    margin-bottom: 0;
+  }
+  
+  .filter-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    color: #004AAD;
+    width: 120px;
+  }
+  
+  .filter-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .filter-btn {
+    padding: 8px 16px;
+    border: 2px solid #004AAD;
+    background: white;
+    color: #004AAD;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .filter-btn:hover {
+    background: #eaf0ff;
+  }
+  
+  .filter-btn.active {
+    background: #004AAD;
+    color: white;
+  }
+  
+  /* Matches Grid */
+  .matches-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+  }
+  
+  /* Match Card - sharing styles from UpcomingMatches but with some modifications */
+  .match-card {
+    background: linear-gradient(180deg, #ffffff, #dbeaff);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+  }
+  
+  .match-card:hover {
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+  }
+  
+  /* Match Header */
+  .match-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 600;
+    color: #004AAD;
+    margin-bottom: 15px;
+  }
+  
+  /* Status colors by format */
+  .match-status {
+    padding: 4px 10px;
+    border-radius: 12px;
+    color: white;
+  }
+  
+  .match-status.t20 {
+    background: #FF6F00;
+  }
+  
+  .match-status.odi {
+    background: #004AAD;
+  }
+  
+  .match-status.test {
+    background: #006064;
+  }
+  
+  /* Teams Section */
+  .teams {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+  }
+  
+  .team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    width: 90px;
+  }
+  
+  .team-logo {
+    width: 70px;
+    height: 45px;
+    background: white;
+    border: 2px solid #004AAD;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 8px;
+  }
+  
+  .team-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .vs-box {
+    font-size: 18px;
+    font-weight: bold;
+    color: #004AAD;
+  }
+  
+  /* Match Details */
+  .match-details {
+    border-top: 2px solid #c2d3ff;
+    padding-top: 12px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .detail {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 0;
+  }
+  
+  .venue {
+    font-size: 13px;
+    color: #777;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+  /* Responsive design for filters */
+  @media (max-width: 768px) {
+    .filter-group {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    
+    .filter-label {
+      width: 100%;
+      margin-bottom: 5px;
+    }
+    
+    .matches-grid {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .matches-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .page-header h1 {
+      font-size: 24px;
+    }
+  }

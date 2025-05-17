@@ -1,0 +1,227 @@
+/* Rankings Page Styling */
+.rankings-container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #F4F6F9;
+    font-family: "Gill Sans", "Lato", Arial, sans-serif;
+}
+
+.rankings-title {
+    color: #00416A;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 3px solid #FF6F00;
+    padding-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Format and Rankings Selector Tabs */
+.format-selector, .rankings-selector {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.format-tab, .rankings-tab {
+    padding: 10px 20px;
+    background: #00416A;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    min-width: 80px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.format-tab:hover, .rankings-tab:hover {
+    background: #005A94;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.format-tab.active, .rankings-tab.active {
+    background: linear-gradient(90deg, #FF6F00, #FF8F00);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Chart Type Selector */
+.chart-selector {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.chart-button {
+    padding: 10px 20px;
+    background: #00416A;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.chart-button:hover {
+    background: #005A94;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.chart-button.active {
+    background: linear-gradient(90deg, #FF6F00, #FF8F00);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Chart Container */
+.chart-container {
+    margin: 30px 0;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Rankings Table */
+.rankings-table-container {
+    margin: 30px 0;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.table-title {
+    color: #00416A;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.rankings-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.rankings-table th, 
+.rankings-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.rankings-table th {
+    background-color: #00416A;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.rankings-table tr:hover {
+    background-color: #f5f5f5;
+}
+
+.rankings-table .first-rank {
+    background-color: rgba(255, 111, 0, 0.1);
+    font-weight: bold;
+}
+
+.rankings-table .first-rank td:first-child {
+    position: relative;
+}
+
+.rankings-table .first-rank td:first-child::before {
+    content: "🏆";
+    position: absolute;
+    left: -5px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .rankings-container {
+        padding: 15px;
+    }
+    
+    .format-tab, .rankings-tab {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+    
+    .chart-button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .format-selector, .rankings-selector {
+        flex-wrap: wrap;
+    }
+    
+    .format-tab, .rankings-tab {
+        flex: 1 0 30%;
+        min-width: 80px;
+    }
+    
+    .rankings-table th, 
+    .rankings-table td {
+        padding: 10px;
+        font-size: 14px;
+    }
+    
+    .table-title {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .rankings-title {
+        font-size: 24px;
+    }
+    
+    .format-tab, .rankings-tab {
+        flex: 1 0 40%;
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+    
+    .chart-selector {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .chart-button {
+        width: 80%;
+    }
+    
+    .rankings-table {
+        font-size: 12px;
+    }
+    
+    .rankings-table th, 
+    .rankings-table td {
+        padding: 8px 5px;
+    }
+}
