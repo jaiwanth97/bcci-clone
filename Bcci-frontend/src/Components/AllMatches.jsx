@@ -11,7 +11,7 @@ const AllMatches = () => {
   // Add more matches to the existing ones from UpcomingMatches
   const allMatches = [
     {
-      id: 1,
+      id: 1, 
       team1: "India",
       team2: "Australia",
       team1Logo: "./Flags/INDIA.png",
