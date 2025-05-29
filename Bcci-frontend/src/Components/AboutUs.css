@@ -11,7 +11,7 @@
 .gallery-item {
   display: flex;
   align-items: center;
-  background: white;
+  background: white; 
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
   border-radius: 12px;
   overflow: hidden;
